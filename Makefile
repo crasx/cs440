@@ -4,19 +4,22 @@
 # Copryright: GNU GPL (http://www.gnu.org/copyleft/gpl.html)
 ##----------------------------------------------------------------------------
 rm=/bin/rm -f
-CC= g++
+CC= clang++
 PROGNAME= story
+#CFLAGS= -g -Wall -lpthread
 
 
-CFLAGS= -g -Wall -lpthread
+SRCS = main.cpp  Environment.cpp \
+regexp/Matcher.cpp   \
+regexp/Pattern.cpp   
 
-SRCS = main.cpp  Environment.cpp
-
-OBJS = main.o Environment.o
+OBJS = main.o Environment.o \
+regexp/Matcher.o   \
+regexp/Pattern.o   \
 
 .cpp.o:
 	$(rm) $@
-	$(CC) $(CFLAGS) -c $*.cpp
+	$(CC) $(CFLAGS) -c $*.cpp -o $*.o
 
 all: $(PROGNAME)
 

@@ -1,11 +1,15 @@
+#include <string>
 #include "Direction.h"
 #include "Path.h"
 #include "Room.h"
 
+using namespace std;
+
 class Environment{
 	public:
-		char *Go(Direction d);
-		char *Look(Direction d);	
+		string go(Direction d);
+		string look(Direction d);	
+		bool parseFile(char *file, string &message);
 		
 	private:
 		Room rooms[19];

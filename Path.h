@@ -1,3 +1,4 @@
+
 struct Room;
 
 struct Path{
