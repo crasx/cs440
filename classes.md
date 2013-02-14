@@ -46,6 +46,8 @@ ENV_DIR
 - WNW = 15
 - WSW = 16
 
+- U = 17
+- U = 18
 
 Environment
 ------
