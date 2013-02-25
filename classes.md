@@ -76,7 +76,10 @@ Environment
 - Go
   - input:  ENV_DIR direction, bool error&
   - return: char *message
-  
+- parseCommands
+ - input: a string that is the command the use entered
+ - return: nothing
+ - function: parses the command the user types and calls the appropriate methods
 User
 ------
 - must be able to parse user input and interact with environment?
